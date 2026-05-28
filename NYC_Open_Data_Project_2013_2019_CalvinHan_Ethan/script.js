@@ -6,31 +6,36 @@ async function init(){
   let link = "ar.json"; //https://data.cityofnewyork.us/resource/mg8s-7r2b.json";
   info = await fetch(link);
   data = await info.json();
-  console.log(data); 
-
-  let output = document.getElementById("output");
+  //console.log(data); 
+  let output = get("output");
   let build = "";
 
-  for(let i = 0; i < data.length; i+=1){
+  //Challenge 6: Build info cards with button to show map if lat and lon values exist
+  for(let i = 0; i < data.length; i++){
     let attendance = data[i];
-    build += `<div class="fitted card">
-                <h3>${attendance.report_type}</h3>
-                <hr>
-                <h5>${attendance.grades}</h5>
-                <h5>${attendance.days_absent}</h5>
-                <h5>${attendance.year}</h5>
-                </hr>
-                <h5>${attendance.total_days}</h5>
-              </div>`    
+    build += card(attendance);
   }
-  output.innerHTML = build;
-
+  //Challenge 7: Display cards in the div with id "leftPanel"
+  output.innerHTML = build;  
 }
-function filterByBorough(){
+
+
+function filterByreporttypeandyear(){
   let output = document.getElementById("output");
-  let borough = document.getElementById("borough").value;
+  let report_type = document.getElementById("reporttype");
+  let year = document.getElementById("years");
   let result = document.getElementById("result");
   
   let build = "";
   let ct = 0;
+
+  for(let i = 0; i < data.length; i++){
+    let attendance = data[i];
+    if (attendance.report_type == reporttype && attendance.year == years){		
+      build += card(attendance);
+    }
+  }
+
+  output.innerHTML = build;
+
 }

@@ -8,19 +8,18 @@ function display(info){
   console.log(info);
 }
 
-function card( cardInfo ){
-  let build = "";
-  build = `<div class="fitted card">
-                <h3>reporttype: ${cardInfo.report_type}</h3>
+function card( info ){
+  let build = `<div class="fitted card">
+                <h3>reporttype:${info.report_type}</h3>
                 <hr>
-                <p>${cardInfo.grades}</p>
+                <p>Year:${info.year}</p>
+                <p>Grade:${info.grades}</p>
+                <p>${info.days_absent}</p>
                 <hr>
-                <p>Issued on: ${cardInfo.total_days}</p>
-                <hr>
-                <p>${cardInfo.days_absent}</p>
-            </div>`;
-
+                <p>Total Days:${info.total_days}</p>`;
+  build +=    `</div>`;
   return build;
+  
 }
 
 //Function to generate Chart (accepts data, id of div for chart, and chart type)
