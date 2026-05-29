@@ -10,11 +10,14 @@ function display(info){
 
 function card( info ){
   let build = `<div class="fitted card">
-                <h3>reporttype:${info.report_type}</h3>
+                <h3>${info.report_type}</h3>
                 <hr>
                 <p>Year:${info.year}</p>
-                <p>Grade:${info.grades}</p>
-                <p>${info.days_absent}</p>
+                <p>Demograph:${info.demographic_variable}</p>
+                <p>Grade:${info.grade}</p>
+                <hr>
+                <p>No. of Absences:${info.days_absent}</p>
+                <h4>Attendance Rate:${info.attendance}</h4>
                 <hr>
                 <p>Total Days:${info.total_days}</p>`;
   build +=    `</div>`;

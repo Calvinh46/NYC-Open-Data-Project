@@ -78,3 +78,27 @@ nav a:hover{
 #output{
   flex-wrap:wrap;
 }
+
+.fit{
+  width:150px;
+  height:150px;
+  object-fit:contain;
+}
+
+#leftPanel{
+  flex:1;
+}
+#rightPanel{
+  flex:2;
+}
+
+.fitted{
+  max-width:200px;
+  min-width:200px;
+}
+#result{
+  background-color: rgb(131, 235, 183);
+  color:rgb(149, 178, 19);
+  max-width: 200px;
+  font-size: 20px;
+}

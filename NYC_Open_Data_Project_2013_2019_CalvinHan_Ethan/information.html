@@ -12,6 +12,7 @@
     <script src="d3.js"></script>
     <script src="helper.js"></script>  
     <script src="script.js"></script>
+    <script src="fillDropDown.js"></script>  
   </head>
   
   <body onload="init()">
@@ -28,17 +29,39 @@
        </div>
     </div>
     <div class="container">
-      <div id="panel">
+      <div id="leftpanel">
         <div class="card">
-          <h1>It is about the Attendance Results From NYC Public School District Where People were Late, On time, or Absent on Classes. These sets of data comes from the DOE</h1>   
+          <h1>It is about the Attendance Results From NYC Public School
+            District Where People were Late, On time, or Absent on 
+            Classes. These sets of data comes from the DOE</h1>   
         </div>
       </div>
-      
-      <div class="card">
-        <div id="output" class="container"></div>
+    </div>
+
+    <div class="container">
+      <div id="leftpanel">
+        <div class="card">
+          <h3>By Report Type & Year</h3>
+          <input type="text" id="reporttype" placeholder="Enter Report Type">
+          <select id="year"></select>
+          <hr></hr>
+          <a class="button" onclick="filterByreporttypeandyear()"> Search </a>
+        </div>
+
+        <div class="card">
+          <h3>SEARCH By Complaint type</h3>
+          <input type="text" id="complaint_type" placeholder="Enter Type of Complaint">
+          <hr></hr>
+          <a class="button" onclick="filterByComplaintType()"> Search </a>
+        </div>
+
+      </div>
+        
+      <div class="card" id="rightpanel">
+        <div id="result"></div>
+        <div id="output"></div>
       </div>
     </div>
-      
 
     <div id="footer" class="container center">
       <h3>Attendance Chart 2013-2019</h3>
