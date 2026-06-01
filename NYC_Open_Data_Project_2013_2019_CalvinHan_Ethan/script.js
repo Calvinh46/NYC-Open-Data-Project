@@ -23,19 +23,13 @@ async function init(){
   output.innerHTML = build;  
 }
   
-  let years = fillDropDown("year");
-  document.getElementById("year").innerHTML = years;
-
-  let violation = fillDropDown("violation");
-  document.getElementById("violation").innerHTML = violation;
-
-  let agencies = fillDropDown("issuing_agency");
-  document.getElementById("issuing_agency").innerHTML = agencies;  
+  let years = fillDropDown("Year");
+  document.getElementById("Year").innerHTML = years;
 
 function filterByreporttypeandyear(){
   let output = get("output");
   let report_type = get("reporttype");
-  let year = get("year");
+  let year = get("Year");
   let result = get("result");
   
   let build = "";
