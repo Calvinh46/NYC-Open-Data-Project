@@ -12,7 +12,6 @@ async function init(){
   let build = "";
   let ct = 0;
 
-  //Challenge 6: Build info cards with button to show map if lat and lon values exist
   for(let i = 0; i < data.length; i++){
     let attendance = data[i];
     build += card(attendance);
@@ -21,15 +20,16 @@ async function init(){
 
   result.innerHTML = `${ct} Results found`;
   output.innerHTML = build;  
-}
-  
-  let years = fillDropDown("Year");
+
+  let years = fillDropDown("year");
   document.getElementById("Year").innerHTML = years;
+}
+
 
 function filterByreporttypeandyear(){
   let output = get("output");
-  let report_type = get("reporttype");
-  let year = get("Year");
+  let report_type = document.getElementById("report_type").value;
+  let year = document.getElementById("Year").value;
   let result = get("result");
   
   let build = "";
@@ -37,7 +37,7 @@ function filterByreporttypeandyear(){
 
   for(let i = 0; i < data.length; i++){
     let attendance = data[i];
-    if (attendance.report_type == reporttype && attendance.year == years){		
+    if (attendance.report_type == report_type && attendance.year == year){		
       build += card(attendance);
       ct++;
     }

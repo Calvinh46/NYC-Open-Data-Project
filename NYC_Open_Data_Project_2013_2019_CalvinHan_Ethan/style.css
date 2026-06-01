@@ -66,9 +66,11 @@ nav a:hover{
 .button:hover{
   background-color:rgb(114, 253, 149);
 }
+
 #panel{
   flex:1;
 }
+
 .flash{
   max-width:200px;
 }
@@ -101,4 +103,8 @@ nav a:hover{
   color:rgb(149, 178, 19);
   max-width: 200px;
   font-size: 20px;
+}
+
+.fitted{
+  max-width:200px;
 }
