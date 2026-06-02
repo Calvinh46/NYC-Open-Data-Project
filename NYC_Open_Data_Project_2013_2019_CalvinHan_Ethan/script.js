@@ -23,6 +23,12 @@ async function init(){
 
   let years = fillDropDown("year");
   document.getElementById("Year").innerHTML = years;
+
+  let demographs = fillDropDown("demographic_variable");
+  document.getElementById("Demograph").innerHTML = demographs;
+
+  let grades = fillDropDown("grade");
+  document.getElementById("Grade").innerHTML = grades;
 }
 
 
@@ -47,3 +53,51 @@ function filterByreporttypeandyear(){
   output.innerHTML = build;
 
 }
+
+function filterBydemographandgrades(){
+  let output = get("output");
+  let demographic = document.getElementById("Demograph").value;
+  let grade = document.getElementById("Grade").value;
+  let result = get("result");
+  
+  let build = "";
+  let ct = 0;
+
+  for(let i = 0; i < data.length; i++){
+    let attendance = data[i];
+    if (attendance.demographic_variable == demographic && attendance.grade == grade){		
+      build += card(attendance);
+      ct++;
+    }
+  }
+
+  result.innerHTML = `${ct} Results found`;
+  output.innerHTML = build;
+
+}
+
+function By(){
+  let nypd = 0, dot = 0, hpd = 0, other = 0;
+
+  for(let i = 0; i < data.length; i++){
+    let attendance = data[i];
+    if(attendance. == ""){
+      ++;
+    }else if(attendance. == ""){
+      dot++;
+    }else if(attendance. == ""){
+      ++;
+    }else other++; 
+  }
+  let chartData = [
+      ["NYC Police Department", nypd],
+      ["Dept of Transportation", dot],
+      ["Dept of Housing Preservation and Development", hpd],
+      ["OTHER", other]
+    ];
+
+  let chartType = document.getElementById("chartType").value;
+
+  displayChart(chartData, "output", chartType);
+}
+
