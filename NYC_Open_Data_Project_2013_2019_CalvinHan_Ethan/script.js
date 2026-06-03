@@ -75,29 +75,3 @@ function filterBydemographandgrades(){
   output.innerHTML = build;
 
 }
-
-function By(){
-  let nypd = 0, dot = 0, hpd = 0, other = 0;
-
-  for(let i = 0; i < data.length; i++){
-    let attendance = data[i];
-    if(attendance. == ""){
-      ++;
-    }else if(attendance. == ""){
-      dot++;
-    }else if(attendance. == ""){
-      ++;
-    }else other++; 
-  }
-  let chartData = [
-      ["NYC Police Department", nypd],
-      ["Dept of Transportation", dot],
-      ["Dept of Housing Preservation and Development", hpd],
-      ["OTHER", other]
-    ];
-
-  let chartType = document.getElementById("chartType").value;
-
-  displayChart(chartData, "output", chartType);
-}
-

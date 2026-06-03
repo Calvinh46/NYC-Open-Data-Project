@@ -12,7 +12,7 @@ html,body{
 }
 
 nav{
-  background-color:rgb(161, 241, 165);
+  background-color:rgb(24, 119, 148);
 }
 nav a{
   color:black;
@@ -25,14 +25,14 @@ nav a:hover{
   color:white;
 }
 .subbanner{
-  background-color:rgb(157, 255, 214);
+  background-color:rgb(24, 118, 161);
 }
 #banner{
   background-color:rgb(77, 156, 126);
   color:white;
 }
 #footer{
-  background-color:rgb(114, 252, 183);
+  background-color:rgb(13, 156, 161);
   color:white;
   /*position:fixed;*/
   left: 0;
