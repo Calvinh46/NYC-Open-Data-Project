@@ -14,7 +14,7 @@ async function init(){
 }
 
 function ByAttendanceResult(){
-  let k12 = 0, kin = 0, first = 0, sec = 0, third = 0, fourth = 0,  other = 0;
+  let k12 = 0, kin = 0, first = 0, sec = 0, third = 0, fourth = 0, fifth = 0, sixth = 0, seventh = 0, eighth = 0, fm = 0, soph = 0, jun = 0, sen = 0, other = 0;
 
   for(let i = 0; i < data.length; i++){
     let attendance = data[i];
@@ -45,7 +45,7 @@ function ByAttendanceResult(){
     }else if(attendance.grade == "11"){
       jun++;
     }else if(attendance.grade == "12"){
-      soph++;
+      sen++;
     }else other++; 
   }
   let chartData = [
@@ -55,6 +55,14 @@ function ByAttendanceResult(){
       ["2", sec],
       ["3", third],
       ["4", fourth],
+      ["5", fifth],
+      ["6", sixth],
+      ["7", seventh],
+      ["8", eighth],
+      ["9", fm],
+      ["10", soph],
+      ["11", jun],
+      ["12", sen],
       ["OTHER", other]
     ];
 
