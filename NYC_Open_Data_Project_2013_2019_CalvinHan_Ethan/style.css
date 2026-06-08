@@ -22,18 +22,18 @@ nav a{
   text-align:center;
 }
 nav a:hover{
-  color:white;
+  color:rgb(86, 235, 0);
 }
 .subbanner{
   background-color:rgb(24, 118, 161);
 }
 #banner{
   background-color:rgb(77, 156, 126);
-  color:white;
+  color:rgb(255, 255, 255);
 }
 #footer{
   background-color:rgb(13, 156, 161);
-  color:white;
+  color:rgb(255, 255, 255);
   /*position:fixed;*/
   left: 0;
   right: 0;
@@ -107,4 +107,5 @@ nav a:hover{
 
 .fitted{
   max-width:200px;
+  background-color: rgb(214, 168, 52);
 }
